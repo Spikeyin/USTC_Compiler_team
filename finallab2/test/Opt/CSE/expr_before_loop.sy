@@ -1,0 +1,16 @@
+int main() {
+    float result = 0.0;
+    float x_1 = 3.14159, y_1 = 2.71828, z_1 = 1.41421;  // 基础变量
+    int i = 0;
+    float tmp = (((x_1 * y_1) / z_1 ) * (z_1 + 1.14) / (y_1 * 1.19 + x_1) + x_1) / (x_1 + y_1 + z_1);
+    // 开始冗余计算
+    while (i < 100000000) { 
+        result = (((x_1 * y_1) / z_1 ) * (z_1 + 1.14) / (y_1 * 1.19 + x_1) + x_1) / (x_1 + y_1 + z_1) + result;
+        i = i + 1;
+    }
+
+    // 打印最终结果
+    putfloat(result);
+
+    return 0;
+}

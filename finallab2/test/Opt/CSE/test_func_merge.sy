@@ -1,0 +1,36 @@
+// 测试函数合并优化
+// 两个相似的函数，计算不同的数学运算
+
+int calc_add(int a, int b) {
+    int c = a + b;
+    if (c > 10) {
+        return c * 2;
+    } else {
+        return c + 5;
+    }
+}
+
+int calc_sub(int a, int b) {
+    int c = a - b;
+    if (c > 10) {
+        return c * 2;
+    } else {
+        return c + 5;
+    }
+}
+
+int main() {
+    int x = 15;
+    int y = 5;
+    
+    // 测试两个函数
+    int result1 = calc_add(x, y);  // 应该返回 40
+    int result2 = calc_sub(x, y);  // 应该返回 20
+    
+    putint(result1);
+    putch(10);  // 换行
+    putint(result2);
+    putch(10);  // 换行
+    
+    return 0;
+}
